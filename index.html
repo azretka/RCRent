@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RCRent — Аренда эксклюзивных авто в Крыму</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<main>
+<body>
+
+  <!-- ========================
+       HEADER (БЭМ: header)
+  ======================== -->
+  <header class="header">
+    <div class="header__inner">
+
+      <!-- Логотип: замените div на <img src="img/logo.svg" alt="RCRent"> -->
+      <a href="/" class="header__logo">
+        <img src="./logo_gotovo2-oyse0kctwblixledlug8tdgifzhz3p1qg34bxwf0wc 1.svg" alt="RCRent">
+      </a>
+
+      <!-- Навигация -->
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#fleet" class="nav__link">Наш парк</a>
+          </li>
+          <li class="nav__item">
+            <a href="#terms" class="nav__link">Условия аренды</a>
+          </li>
+          <li class="nav__item">
+            <a href="#reviews" class="nav__link">Отзывы</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contacts" class="nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Телефон -->
+      <a href="tel:+79781173839" class="header__phone">+79781173839</a>
+
+    </div>
+  </header>
+
+
+  <!-- ========================
+       HERO (БЭМ: hero)
+  ======================== -->
+  <section class="hero">
+
+    <!-- Фоновый силуэт Крыма: замените на  -->
+    <img src="./kisspng-autonomous-republic-of-crimea-crimean-people-s-rep-5af46f1fed8ca3 1.png" alt=""
+      class="hero__crimea-img">
+
+    <div class="hero__inner">
+
+      <!-- Левый контент -->
+      <div class="hero__content">
+
+        <h1 class="hero__title">
+          Аренда <span class="hero__title-accent">эксклюзивных</span> авто в Крыму
+        </h1>
+
+        <ul class="hero__features">
+          <li class="hero__feature">Доставка в любую точку Крыма</li>
+          <li class="hero__feature">Бесплатно доп. аксессуары</li>
+          <li class="hero__feature">Любой способ оплаты</li>
+        </ul>
+
+        <a href="#fleet" class="hero__btn">Выбрать авто</a>
+
+      </div>
+
+    </div>
+
+    <!-- Изображение авто: замените div на  -->
+    <div class="hero__car">
+      <img src="./gold-bmw-m4-car 1.png" alt="BMW M8">
+    </div>
+
+  </section>
+  <!-- ========================
+     FLEET (БЭМ: fleet)
+======================== -->
+  <section class="fleet" id="fleet">
+
+    <div class="fleet__brand-logo fleet__brand-logo--left">
+      <img src="./bmw 421.svg" alt="">
+    </div>
+
+    <div class="fleet__brand-logo fleet__brand-logo--right">
+      <img src="./mercedes1 1.png" alt="">
+    </div>
+
+    <h2 class="fleet__title">
+      Наш <span class="fleet__title-accent">автопарк</span>
+    </h2>
+
+    <div class="fleet__grid">
+
+      <article class="card">
+        <div class="card__header">
+          <img src="./bmw 421.svg" alt="BMW" class="card__brand-icon">
+          <span class="card__name">BMW i <span class="card__name-accent">325</span> кабриолет</span>
+        </div>
+        <div class="card__photo">
+          <img src="./Rectangle 6 (1).jpg" alt="BMW i325">
+        </div>
+        <div class="card__specs">
+          <div class="card__spec">
+            <img src="./Group 35.svg" alt="" class="card__spec-icon">
+            <span class="card__spec-value">2007</span>
+            <span class="card__spec-label">год</span>
+          </div>
+          <div class="card__spec">
+            <img src="./Group.svg" alt="" class="card__spec-icon">
+            <span class="card__spec-value">автомат</span>
+            <span class="card__spec-label">КПП</span>
+          </div>
+          <div class="card__spec">
+            <img src="./Vector (2).svg" alt="" class="card__spec-icon">
+            <span class="card__spec-value">2,5</span>
+            <span class="card__spec-label">л.</span>
+          </div>
+          <div class="card__spec">
+            <img src="./Vector (1).svg" alt="" class="card__spec-icon">
+            <span class="card__spec-value">95</span>
+            <span class="card__spec-label">топливо</span>
+          </div>
+        </div>
+        <p class="card__price">от <span class="card__price-value">4500 р.</span> / сутки</p>
+        <a href="#contacts" class="card__btn">Арендовать авто</a>
+      </article>
+
+      <article class="card">
+        <div class="card__header">
+          <img src="./bmw 421.svg" alt="BMW" class="card__brand-icon">
+          <span class="card__name">BMW <span class="card__name-accent">320</span> </span>
+        </div>
+        <div class="card__photo">
+          <img src="./Rectangle 6 (2).jpg" alt="BMW 320">
+        </div>
+        <div class="card__specs">
+          <div class="card__spec">
+            <img src="./Group 35.svg" alt="" class="card__spec-icon">
+            <span class="card__spec-value">2007</span>
+            <span class="card__spec-label">год</span>
+          </div>
+          <div class="card__spec">
+            <img src="./Group.svg" alt="" class="card__spec-icon">
+            <span class="card__spec-value">автомат</span>
+            <span class="card__spec-label">КПП</span>
+          </div>
+          <div class="card__spec">
+            <img src="./Vector (2).svg" alt="" class="card__spec-icon">
+            <span class="card__spec-value">2,5</span>
+            <span class="card__spec-label">л.</span>
+          </div>
+          <div class="card__spec">
+            <img src="./Vector (1).svg" alt="" class="card__spec-icon">
+            <span class="card__spec-value">95</span>
+            <span class="card__spec-label">топливо</span>
+          </div>
+        </div>
+        <p class="card__price">от <span class="card__price-value">4500 р.</span> / сутки</p>
+        <a href="#contacts" class="card__btn">Арендовать авто</a>
+      </article>
+
+      <article class="card">
+        <div class="card__header">
+          <img src="./bmw 421.svg" alt="BMW" class="card__brand-icon">
+          <span class="card__name">BMW <span class="card__name-accent">Z4</span> кабриолет</span>
+        </div>
+        <div class="card__photo">
+          <img src="./Rectangle 6.jpg" alt="BMW Z4">
+        </div>
+        <div class="card__specs">
+          <div class="card__spec">
+            <img src="./Group 35.svg" alt="" class="card__spec-icon">
+            <span class="card__spec-value">2009</span>
+            <span class="card__spec-label">год</span>
+          </div>
+          <div class="card__spec">
+            <img src="./Group.svg" alt="" class="card__spec-icon">
+            <span class="card__spec-value">автомат</span>
+            <span class="card__spec-label">КПП</span>
+          </div>
+          <div class="card__spec">
+            <img src="./Vector (2).svg" alt="" class="card__spec-icon">
+            <span class="card__spec-value">2,5</span>
+            <span class="card__spec-label">л.</span>
+          </div>
+          <div class="card__spec">
+            <img src="./Vector (1).svg" alt="" class="card__spec-icon">
+            <span class="card__spec-value">95</span>
+            <span class="card__spec-label">топливо</span>
+          </div>
+        </div>
+        <p class="card__price">от <span class="card__price-value">7500 р.</span> / сутки</p>
+        <a href="#contacts" class="card__btn">Арендовать авто</a>
+      </article>
+
+      <!-- Остальные карточки по той же структуре -->
+
+    </div>
+
+  </section>
+  <!-- ========================
+     TERMS (БЭМ: terms)
+======================== -->
+  <section class="terms" id="terms">
+
+    <h2 class="terms__title">
+      <span class="terms__title-accent">Условия</span> аренды
+    </h2>
+
+    <div class="terms__content">
+
+      <div class="terms__items">
+
+        <div class="terms__item">
+          <img src="./pasport.svg" alt="" class="terms__icon">
+          <span class="terms__label">Паспорт</span>
+        </div>
+
+        <div class="terms__item">
+          <img src="./driver-license 1.svg" alt="" class="terms__icon">
+          <span class="terms__label">Водительское<br>удостоверение</span>
+        </div>
+
+        <div class="terms__item">
+          <img src="./age 1.svg" alt="" class="terms__icon">
+          <span class="terms__label">Возраст от<br>22 лет</span>
+        </div>
+
+        <div class="terms__item">
+          <img src="./steering-wheel 1.svg" alt="" class="terms__icon">
+          <span class="terms__label">Водительский стаж<br>от 3 лет</span>
+        </div>
+
+      </div>
+
+      <a href="img/dogovor.pdf" class="terms__btn" target="_blank">Договор аренды</a>
+
+    </div>
+
+    <div class="terms__car">
+      <img src="./blue-bmw-4-series-car_2-removebg-preview.png" alt="BMW">
+    </div>
+
+  </section>
+  <!-- ========================
+     BOOKING (БЭМ: booking)
+======================== -->
+  <section class="booking" id="booking">
+
+    <div class="booking__card">
+
+      <h2 class="booking__title">Аренда автомобиля</h2>
+
+      <div class="booking__form">
+
+        <!-- Машина — на всю ширину -->
+        <div class="booking__row booking__row--full">
+          <div class="booking__select">
+            <select name="car">
+              <option value="" disabled selected>Машина</option>
+              <option>BMW i325 кабриолет</option>
+              <option>BMW 320 кабриолет</option>
+              <option>BMW Z4 кабриолет</option>
+              <option>BMW 420D кабриолет</option>
+              <option>Mercedes C180</option>
+            </select>
+            <span class="booking__arrow">&#8964;</span>
+          </div>
+        </div>
+
+        <!-- Дата получения / Дата возврата -->
+        <div class="booking__row booking__row--half">
+          <div class="booking__select">
+            <select name="date-from">
+              <option value="" disabled selected>Дата получения</option>
+            </select>
+            <span class="booking__arrow">&#8964;</span>
+          </div>
+          <div class="booking__select">
+            <select name="date-to">
+              <option value="" disabled selected>Дата возврата</option>
+            </select>
+            <span class="booking__arrow">&#8964;</span>
+          </div>
+        </div>
+
+        <!-- Время получения / Время возврата -->
+        <div class="booking__row booking__row--half">
+          <div class="booking__select">
+            <select name="time-from">
+              <option value="" disabled selected>Время получения</option>
+            </select>
+            <span class="booking__arrow">&#8964;</span>
+          </div>
+          <div class="booking__select">
+            <select name="time-to">
+              <option value="" disabled selected>Время возврата</option>
+            </select>
+            <span class="booking__arrow">&#8964;</span>
+          </div>
+        </div>
+
+        <!-- Место получения / Место возврата -->
+        <div class="booking__row booking__row--half">
+          <div class="booking__select">
+            <select name="place-from">
+              <option value="" disabled selected>Место получения</option>
+            </select>
+            <span class="booking__arrow">&#8964;</span>
+          </div>
+          <div class="booking__select">
+            <select name="place-to">
+              <option value="" disabled selected>Место возврата</option>
+            </select>
+            <span class="booking__arrow">&#8964;</span>
+          </div>
+        </div>
+
+        <!-- Кнопка -->
+        <div class="booking__row booking__row--center">
+          <button class="booking__btn" type="button">Далее</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- ========================
+     REVIEWS (БЭМ: reviews)
+======================== -->
+<section class="reviews" id="reviews">
+
+  <h2 class="reviews__title">Отзывы</h2>
+
+  <div class="reviews__slider">
+    <div class="reviews__track" id="reviewsTrack">
+
+      <div class="reviews__item">
+        <img src="./review1.jpg" alt="Отзыв 1" class="reviews__photo">
+      </div>
+
+      <div class="reviews__item">
+        <img src="./review2.jpg" alt="Отзыв 2" class="reviews__photo">
+      </div>
+
+      <div class="reviews__item">
+        <img src="./review3.jpg" alt="Отзыв 3" class="reviews__photo">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="reviews__dots" id="reviewsDots">
+    <button class="reviews__dot reviews__dot--active" data-index="0"></button>
+    <button class="reviews__dot" data-index="1"></button>
+    <button class="reviews__dot" data-index="2"></button>
+  </div>
+
+  <div class="reviews__car">
+    <img src="img/car-top.png" alt="">
+  </div>
+
+</section>
+</body>
+</main>
+
+</html>

@@ -1,0 +1,825 @@
+/* =====================
+   FONTS
+===================== */
+@font-face {
+  font-family: 'Muller';
+  src: url('fonts/MullerRegular.woff2') format('woff2'),
+       url('fonts/MullerRegular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Muller';
+  src: url('fonts/MullerBold.woff2') format('woff2'),
+       url('fonts/MullerBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Muller';
+  src: url('fonts/MullerItalic.woff2') format('woff2'),
+       url('fonts/MullerItalic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Muller';
+  src: url('fonts/MullerBoldItalic.woff2') format('woff2'),
+       url('fonts/MullerBoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* =====================
+   RESET & BASE
+===================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  font-family: 'Muller', sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* =====================
+   HEADER
+===================== */
+.header {
+  width: 100%;
+  height: 74px;
+  background-color: #111111;
+  display: flex;
+  align-items: center;
+}
+
+.header__inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 90px;
+  height: 40px;
+}
+
+.header__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.header__logo-placeholder {
+  width: 90px;
+  height: 40px;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.header__divider {
+  width: 1px;
+  height: 40px;
+  border-left: 2px dashed rgba(255, 255, 255, 0.3);
+  margin: 0 30px;
+  flex-shrink: 0;
+}
+
+.header__phone {
+  font-family: 'Muller', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.header__phone:hover {
+  color: #f0c42a;
+}
+
+/* =====================
+   NAV
+===================== */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav__link {
+  font-family: 'Muller', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0 40px 0 0;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.nav__item:last-child .nav__link {
+  padding-right: 0;
+}
+
+.nav__link:hover {
+  color: #f0c42a;
+}
+
+/* =====================
+   HERO
+===================== */
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 784px;
+  overflow: hidden;
+  background: linear-gradient(
+    105deg,
+    #111111 0%,
+    #161b18 40%,
+    #1a2e22 65%,
+    #1f3828 100%
+  );
+}
+
+.hero__deco-line {
+  position: absolute;
+  top: 0;
+  left: 300px;
+  width: 2px;
+  height: 120px;
+  border-left: 2px dashed rgba(255, 255, 255, 0.25);
+  z-index: 2;
+}
+
+.hero__crimea-placeholder {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 480px;
+  height: 480px;
+  border: 2px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Реальное изображение силуэта Крыма */
+.hero__crimea-img {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+}
+
+.hero__content {
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__title {
+  font-family: 'Muller', sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  font-style: italic;
+  color: #ffffff;
+  line-height: 1.04;
+  margin-bottom: 32px;
+}
+
+.hero__title-accent {
+  color: #f0c42a;
+}
+
+.hero__features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 36px;
+}
+
+.hero__feature {
+  font-family: 'Muller', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.15;
+  padding: 10px 0;
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 253px;
+  height: 63px;
+  background: linear-gradient(90deg, #d4a800 0%, #f5c800 50%, #d4a800 100%);
+  border: none;
+  border-radius: 50px;
+  font-family: 'Muller', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111111;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 24px rgba(240, 196, 42, 0.35);
+}
+
+.hero__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(240, 196, 42, 0.5);
+}
+
+.hero__btn:active {
+  transform: translateY(0);
+}
+
+.hero__car {
+  position: absolute;
+  right: -20px;
+  bottom: 60px;
+  width: 887px;
+  height: 440px;
+  z-index: 1;
+}
+
+.hero__car img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero__car-placeholder {
+  width: 887px;
+  height: 440px;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+/* =====================
+   FLEET
+===================== */
+.fleet {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 70px 60px 80px;
+  overflow: hidden;
+  background-color: #111111;
+}
+
+.fleet__brand-logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: 0;
+  width: 220px;
+}
+
+.fleet__brand-logo--left { left: -40px; }
+.fleet__brand-logo--right { right: -40px; }
+
+.fleet__brand-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.fleet__title {
+  font-family: 'Muller', sans-serif;
+  font-size: 42px;
+  font-weight: 400;
+  font-style: italic;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 48px;
+  position: relative;
+  z-index: 1;
+}
+
+.fleet__title-accent {
+  font-weight: 700;
+  color: #f0c42a;
+}
+
+.fleet__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* =====================
+   CARD
+===================== */
+.card {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 18px 18px 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.card__brand-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.card__name {
+  font-family: 'Muller', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.card__name-accent {
+  font-weight: 700;
+  color: #f0c42a;
+}
+
+.card__photo {
+  width: 100%;
+  height: 190px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  background-color: #222;
+}
+
+.card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card__specs {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.card__spec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.card__spec-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.card__spec-value {
+  font-family: 'Muller', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+}
+
+.card__spec-label {
+  font-family: 'Muller', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.45);
+  text-align: center;
+}
+
+.card__price {
+  font-family: 'Muller', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.card__price-value {
+  font-weight: 700;
+}
+
+.card__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #f0c42a;
+  border-radius: 50px;
+  font-family: 'Muller', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #f0c42a;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-top: auto;
+}
+
+.card__btn:hover {
+  background: #f0c42a;
+  color: #111111;
+}
+/* =====================
+   TERMS
+===================== */
+.terms {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 70px 60px 0;
+  overflow: hidden;
+  background: linear-gradient(
+    105deg,
+    #111111 0%,
+    #161b18 40%,
+    #1a2e22 65%,
+    #1f3828 100%
+  );
+  min-height: 480px;
+}
+
+.terms__title {
+  font-family: 'Muller', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  font-style: italic;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.terms__title-accent {
+  color: #f0c42a;
+}
+
+.terms__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.terms__items {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 80px;
+}
+
+.terms__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 140px;
+}
+
+.terms__icon {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.terms__label {
+  font-family: 'Muller', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.terms__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  height: 52px;
+  background: transparent;
+  border: 2px solid #f0c42a;
+  border-radius: 50px;
+  font-family: 'Muller', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #f0c42a;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.terms__btn:hover {
+  background: #f0c42a;
+  color: #111111;
+}
+
+.terms__car {
+  position: absolute;
+  bottom: 0;
+  left: -40px;
+  width: 620px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.terms__car img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* =====================
+   BOOKING
+===================== */
+.booking {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 60px;
+  background-color: #111111;
+  display: flex;
+  justify-content: center;
+}
+
+.booking__card {
+  width: 100%;
+  max-width: 780px;
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 48px 56px 44px;
+}
+
+.booking__title {
+  font-family: 'Muller', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  font-style: italic;
+  color: #f0c42a;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.booking__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.booking__row {
+  display: flex;
+  gap: 16px;
+}
+
+.booking__row--full {
+  flex-direction: column;
+}
+
+.booking__row--half {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.booking__row--center {
+  justify-content: center;
+  margin-top: 8px;
+}
+
+/* Обёртка селекта */
+.booking__select {
+  position: relative;
+  width: 100%;
+}
+
+.booking__select select {
+  width: 100%;
+  height: 52px;
+  padding: 0 44px 0 18px;
+  background-color: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  font-family: 'Muller', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.booking__select select:focus {
+  border-color: #f0c42a;
+}
+
+.booking__select select option {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Стрелка */
+.booking__arrow {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: #ffffff;
+  pointer-events: none;
+  line-height: 1;
+}
+
+/* Кнопка */
+.booking__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 56px;
+  height: 52px;
+  background: linear-gradient(90deg, #d4a800 0%, #f5c800 50%, #d4a800 100%);
+  border: none;
+  border-radius: 50px;
+  font-family: 'Muller', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111111;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(240, 196, 42, 0.35);
+}
+
+.booking__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(240, 196, 42, 0.5);
+}
+
+.booking__btn:active {
+  transform: translateY(0);
+}
+/* =====================
+   REVIEWS
+===================== */
+.reviews {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 60px 60px 80px;
+  background: linear-gradient(
+    105deg,
+    #111111 0%,
+    #161b18 40%,
+    #1a2e22 65%,
+    #1f3828 100%
+  );
+  overflow: hidden;
+}
+
+.reviews__title {
+  font-family: 'Muller', sans-serif;
+  font-size: 42px;
+  font-weight: 400;
+  font-style: italic;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.reviews__slider {
+  overflow: hidden;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.reviews__track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.4s ease;
+}
+
+.reviews__item {
+  flex: 0 0 calc((100% - 48px) / 3);
+  min-width: 0;
+}
+
+.reviews__photo {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+}
+
+.reviews__dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.reviews__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.reviews__dot--active {
+  background-color: #ffffff;
+}
+
+.reviews__car {
+  position: absolute;
+  right: -60px;
+  bottom: 0;
+  width: 420px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.reviews__car img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
